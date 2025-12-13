@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays the user owning each running process
-ps -e -o user=
+command ps -e -o user=
