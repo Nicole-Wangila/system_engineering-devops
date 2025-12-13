@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-# Displays process PPID, execution time, and command
-ps -o ppid,time,cmd -ax
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
