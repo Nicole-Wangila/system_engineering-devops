@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Displays process PPID, execution time, and command
-
-ps -o ppid,time,cmd -ax
+# Displays the parent process IDs of all running processes
+ps -o ppid -ax
