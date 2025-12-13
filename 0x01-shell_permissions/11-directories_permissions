@@ -1,2 +1,2 @@
 #!/bin/bash
-# Add execute permission to all subdirectories of the current directory
+chmod a+x */ 
