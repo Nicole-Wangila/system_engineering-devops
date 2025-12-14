@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# 7-highlander: prints a message indefinitely and reacts to SIGTERM
+# A Bash script that runs indefinitely and catches the SIGTERM signal without exiting
 
-# Trap SIGTERM and print the invincible message
-trap 'echo "I am invincible!!!"' SIGTERM
+handle_sigterm() {
+    echo "I am invincible!!!"
+}
 
-# Infinite loop
+trap 'handle_sigterm' SIGTERM
+
 while true; do
     echo "To infinity and beyond"
     sleep 2
