@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
-# Handle SIGTERM: print message and exit so the test harness can finish
+# A Bash script that displays "To infinity and beyond" indefinitely
+# and prints "I am invincible!!!" when receiving a SIGTERM signal
 
-trap 'echo "I am invincible!!!" >&2; exit 0' SIGTERM
+# Function to handle SIGTERM
+term_handler() {
+    echo "I am invincible!!!"
+}
 
-while true
-do
+# Trap SIGTERM and call term_handler
+trap term_handler SIGTERM
+
+# Infinite loop
+while true; do
     echo "To infinity and beyond"
     sleep 2
 done
