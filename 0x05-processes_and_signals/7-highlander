@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# A Bash script that displays "To infinity and beyond" indefinitely
-# and prints "I am invincible!!!" when receiving a SIGTERM signal
+# 7-highlander: prints a message indefinitely and reacts to SIGTERM
 
-# Handle SIGTERM without exiting
+# Trap SIGTERM and print the invincible message
 trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
