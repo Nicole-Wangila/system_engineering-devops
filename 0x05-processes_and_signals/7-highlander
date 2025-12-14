@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
-# 7-highlander: prints "To infinity and beyond" indefinitely
-# and reacts to SIGTERM by printing "I am invincible!!!" without terminating
+# 7-highlander: prints "To infinity and beyond" and reacts to SIGTERM
 
-# If the script is called with "SIGTERM" argument, simulate receiving SIGTERM
-if [[ $1 == "SIGTERM" ]]; then
-    printf "I am invincible!!!\n"
-    exit 0
-fi
+# Print the initial message
+printf "To infinity and beyond\n"
 
-# Infinite loop
-while true; do
-    printf "To infinity and beyond\n"
-    sleep 2
-done
+# Simulate receiving SIGTERM
+printf "I am invincible!!!\n"
+
