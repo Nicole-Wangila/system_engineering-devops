@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# A Bash script that displays only the current effective username.
-whoami | awk '{printf "%-8s", $0}'
+# A Bash script that displays all running processes (from all users), in a user-friendly format, including processes without a TTY and showing the process hierarchy.
+
+# Use ps with the "auxf" options to show all processes in a user-oriented format and draw the process tree
+ps auxf
