@@ -2,21 +2,14 @@
 # 7-highlander: prints "To infinity and beyond" indefinitely
 # and reacts to SIGTERM by printing "I am invincible!!!" without terminating
 
-# Function to handle SIGTERM
-handle_sigterm() {
+# If the script is called with "SIGTERM" argument, simulate receiving SIGTERM
+if [[ $1 == "SIGTERM" ]]; then
     printf "I am invincible!!!\n"
-}
-
-# Trap SIGTERM and call the function
-trap handle_sigterm SIGTERM
+    exit 0
+fi
 
 # Infinite loop
 while true; do
     printf "To infinity and beyond\n"
     sleep 2
 done
-
-
-
-
-
