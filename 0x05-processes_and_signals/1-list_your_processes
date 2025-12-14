@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# A Bash script that displays the user owning each running process
-
-ps -eo user
+# A Bash script that displays a list of all currently running processes in a tree format.
+ps aux --forest
