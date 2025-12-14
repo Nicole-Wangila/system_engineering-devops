@@ -1,28 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# 7-highlander: prints "To infinity and beyond" indefinitely
+# and reacts to SIGTERM by printing "I am invincible!!!" without terminating
 
-# Function to handle SIGTERM
-handle_sigterm() {
-    echo "I am invincible!!!"
-}
-
-# Check if the script is called with "stop"
-if [[ $1 == "stop" ]]; then
-    # Find the PID(s) of this script running normally
-    pids=$(pgrep -f "$0" | grep -v $$)
-    
-    for pid in $pids; do
-        kill -TERM $pid
-    done
-    exit 0
-fi
-
-# Trap SIGTERM
-trap 'handle_sigterm' SIGTERM
+# Trap SIGTERM and print the message
+trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
 while true; do
     echo "To infinity and beyond"
     sleep 2
 done
+
 
 
