@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# Handle SIGTERM: print message and continue running
+# A Bash script that displays "To infinity and beyond" indefinitely
+# and prints "I am invincible!!!" when receiving a SIGTERM signal
 
+# Handle SIGTERM without exiting
 trap 'echo "I am invincible!!!"' SIGTERM
 
+# Infinite loop
 while true; do
     echo "To infinity and beyond"
     sleep 2
