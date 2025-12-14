@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all running processes in a user-oriented format with hierarchy
+# A Bash script that displays the user owning each running process
+
 ps -eo user
