@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# A Bash script that handles SIGTERM and exits
+# Handle SIGTERM: print message and exit so the test harness can finish
 
-trap 'echo "I am invincible!!!"; exit' TERM
+trap 'echo "I am invincible!!!" >&2; exit 0' SIGTERM
 
 while true
 do
