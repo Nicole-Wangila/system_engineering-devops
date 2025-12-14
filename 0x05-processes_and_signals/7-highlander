@@ -4,17 +4,18 @@
 
 # Function to handle SIGTERM
 handle_sigterm() {
-    echo "I am invincible!!!"
+    printf "I am invincible!!!\n"
 }
 
 # Trap SIGTERM and call the function
-trap 'handle_sigterm' SIGTERM
+trap handle_sigterm SIGTERM
 
 # Infinite loop
 while true; do
-    echo "To infinity and beyond"
+    printf "To infinity and beyond\n"
     sleep 2
 done
+
 
 
 
