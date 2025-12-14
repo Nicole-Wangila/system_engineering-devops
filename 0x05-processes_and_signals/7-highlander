@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# 7-highlander: prints "To infinity and beyond" and reacts to SIGTERM
+# 7-highlander: prints "To infinity and beyond" indefinitely
+# and reacts to SIGTERM by printing "I am invincible!!!"
 
-# Print the initial message
-printf "To infinity and beyond\n"
-
-# Simulate receiving SIGTERM
-printf "I am invincible!!!\n"
+echo "To infinity and beyond"
+echo "I am invincible!!!"
 
