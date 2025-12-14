@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# A Bash script that displays a list of all currently running processes in a tree format.
-ps aux --forest
+# A Bash script that displays the USER column header and the effective user name.
+ps -eo user:10 --no-headers | head -n 1
