@@ -2,8 +2,8 @@
 # 7-highlander: prints "To infinity and beyond" indefinitely
 # and reacts to SIGTERM by printing "I am invincible!!!" without terminating
 
-# Trap SIGTERM and print the message
-trap 'echo "I am invincible!!!"' SIGTERM
+# Trap SIGTERM and print the message immediately
+trap 'echo "I am invincible!!!" >&1' SIGTERM
 
 # Infinite loop
 while true; do
