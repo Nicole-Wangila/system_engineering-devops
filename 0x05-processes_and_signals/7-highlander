@@ -5,11 +5,8 @@
 # Trap SIGTERM and print the message
 trap 'echo "I am invincible!!!"' SIGTERM
 
-# Print at least once immediately
-echo "To infinity and beyond"
-
 # Infinite loop
 while true; do
-    sleep 2
     echo "To infinity and beyond"
+    sleep 2
 done
